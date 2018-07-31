@@ -1,0 +1,84 @@
+<!doctype html>
+
+<html>
+    <!-- 
+        Frank Kreutzer 
+        Read the project.txt for walk through of the program 
+    -->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sports</title>
+    <!-- jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <!-- jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <!-- jQuery UI Themes  -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
+    <!-- Project JS -->
+    <script type="text/javascript" src="code.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <style type="text/css">
+        body {
+            font-family: sans-serif;
+        }
+        .container {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        #cart {
+            border: 2px solid black;
+            background-color: lightgray;
+            height: 100px;
+            width: 300px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1 style="text-align: center">Sports Select</h1><br>
+
+        <h2>Step 1: Enter as many sports as you want</h2>
+        <p>
+            <label><strong>Sport Name: </strong></label>
+            <input type="text" size="15" id="sportName" onfocus="this.value=''" title="Enter a sport name">
+            <input type="button" id="addSport" value="Add Sport" title="Click to add a sport" />
+        </p>
+
+        <h2>Sports List</h2>
+        <ul id="sportList">
+            All entered sports will be entered here.
+        </ul><br>
+
+        <h3 style="display: inline">Click for Step 2: </h3>
+        <input type="button" id="step2Btn" value="Step 2" title="Click to show step two" />
+
+
+        <h2 id="step2">Step 2: Drag all the sports from "Sports List" that you've played into the "Played Sports" box</h2>
+        <br><br>
+
+
+        <h2>Played Sports</h2>
+        <ul id="cart">
+
+        </ul>
+
+        <h3 style="display: inline">Once you've added all the sports, click this button to get a summary: </h3>
+        <input type="button" id="step2Btn" value="Get Summary" title="Click to show summary" onclick="getSports()" /><br><br>
+
+        <div id="summary">
+            <h2>Summary</h2>
+            <p id="summaryTxt" style="font-size: 16px"></p>
+        </div>
+    </div>
+
+</body>
+
+</html>

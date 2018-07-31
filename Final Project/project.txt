@@ -1,0 +1,9 @@
+Description for my final project:
+
+1) The user is to to enter in as many sports as they can think, or until they have an amount that they're happy with. These sports will be added to "Sports List".
+
+2) Once they have added all the sports that they wanted, they would read the "Step 2" text, press the "Step 2" button to reveal the next step. Step 2 asks the users to drag and drop any of the sports from "Sports List" into the "Played Sports" cart.
+
+3) When the user has finished dragging over the sports that they've played, they would then press the "Get Summary" button which then reveals a short snippet of text summarizing the items that they've put into the "Played Sports" Cart.
+
+*** Couldn't get items, if removed/added from "Played Sports" to be removed/added from the sportLst array, thus if a user removes/adds an item then clicks "Get Summary", it'll still show the items that were removed/added. ***
