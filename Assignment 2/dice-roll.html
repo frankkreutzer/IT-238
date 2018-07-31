@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<!-- 
+    Frank Kreutzer - IT 238 Assingment 1: Currency Converter
+    
+    HTML file where users can enter in a USD amount and convert it
+    to a select few currenciesfrom the menu
+-->
+
+<head>
+    <title>Dice Roll Simulator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="diceSet.js"></script>
+    <script src="roll.js"></script>
+</head>
+<style>
+    body {
+        background-color: darkgreen;
+        color: #fff;
+    }
+
+    .content {
+        font-family: sans-serif;
+        text-align: center;
+        padding-top: 100px;
+    }
+</style>
+
+<body class="content">
+    <h1>Dice Roll Simulator</h1>
+
+    <p>
+        <label>How many dice would you like to roll?: </label>
+        <select id="diceCount">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+    </p>
+
+    <p>
+        <label>How many sides should the dice have?: </label>
+        <select id="sideCount">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+    </p>
+
+    <p>
+        <input type="button" value="Set Dice" id="setDice">
+
+    </p>
+
+
+    <p>
+        <input type="button" value="Roll Dice" id="diceRoll">
+        <input type="button" value="Reset" id="reset">
+    </p>
+
+    <br>
+
+    <h3 id="outcomeArea"><b>Current Rolled Dice: </b></h3><br>
+    <h3 id="totalsArea"><b>Roll Sets History: </b></h3><br>
+    <h3 id="avgArea"><b>Rolls Average: </b></h3><br>
+</body>
+
+</html>
