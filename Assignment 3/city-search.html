@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<!-- 
+    Frank Kreutzer - IT 238 Assingment 3: Chicago Employee Search
+    
+    HTML file where users can enter a name to search for, and determine what information
+    they want searched/displayed
+-->
+
+<head>
+    <title>Chicago Search</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="ChicagoEmployees.js"></script>
+    <script src="post.js"></script>
+</head>
+<style>
+    body {
+        background-color: #fff;
+        color: #000;
+    }
+
+    .content {
+        font-family: sans-serif;
+        text-align: center;
+        padding-top: 100px;
+    }
+</style>
+
+<body class="content">
+    <h1>Chicago Employee Search</h1>
+
+    <p>Enter first or last name: <input type="text" id="key-word" size="20" /></p>
+    <input type="checkbox" id="department">Department
+    <input type="checkbox" id="position">Position
+    <input type="checkbox" id="salary">Salary<br>
+    
+
+
+    <p><input type="button" id="start" value="Submit Query" /></p>
+
+    <h2>First Matching Employee with Selected Info</h2>
+    
+    <div id="result">
+        First match will appear here
+    </div>
+    <!--<table id="result">
+        <tr>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Position</th>
+            <th>Salary</th>
+        </tr>
+    </table>-->
+
+    <h2>List of all matching names, department/position, and salary</h2>
+    <ol id="names" style="text-align: left; margin-left: 20%">
+        All matching names will appear here
+    </ol>
+</body>
+
+</html>
