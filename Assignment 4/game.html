@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+<!-- Archaeology game board where user clicks their digging locations
+---- Frank Kreutzer
+---- 
+-->
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Game Board</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="board.js"></script>
+    <script type="text/javascript" src="game.js"></script>
+    <style>
+        td {
+            cursor: pointer;
+        }
+
+        .content {
+            font-family: sans-serif;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        table {
+            margin-left: auto;
+            margin-right: auto;
+        } 
+    </style>
+</head>
+
+<body class="content">
+
+    <h1>Archaeology Board</h1>
+    <h2>Click the spot you wish to dig</h2>
+    <table id="board"></table>
+    <h3 id="digAlert"></h3>
+    <!--<p>Enter location of dig: <input type="text" id="digLoc" size="5"> <input type="button" id="digBtn" value="Dig" /></p> -->
+
+    <h2>Game Info</h2>
+    <h3>Dig Attempts: <span id="digCount">0</span></h3>
+    <h3>Successful Dig Attempts: <span id="successCount">0</span></h3>
+    <h3>Excavated Ruins: <span id="ruinCount">0</span></h3>
+
+</body>
+</html>
