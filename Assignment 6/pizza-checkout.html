@@ -1,0 +1,62 @@
+<!doctype html>
+<!--Frank Kreutzer
+    A mock version of a pizza checkout
+-->
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form Example</title>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script src="pizza.js"></script>
+
+</head>
+
+<body>
+
+    <h1>Pizza Checkout Form</h1>
+
+    <form action="http://facsrv.cdm.depaul.edu/~cmiller/php/respond.php" method="post">
+
+        <p id="addressPanel">
+            <label for="address">Delivery Address:</label>
+            <input type="text" name="address" id="address">
+        </p>
+
+        <p>
+            <h2>How would you like to pay?</h2>
+            <input type="radio" name="paying" id="cash" value="cash">
+            <label for="cash">Cash</label><br>
+            <input type="radio" name="paying" id="credit" value="credit">
+            <label for="credit">Credit</label><br>
+        </p>
+
+        <p id="paymentMethod">
+            <label for="cardNumber">Card Number:</label>
+            <input type="text" name="cardNumber" id="cardNumber">
+            <label for="tip">Tip:</label>
+            <input type="text" name="tip" id="tip">
+        </p>
+
+        <p>
+            <h2>How would you like to recieve your pizza?</h2>
+            <input type="radio" name="acquiring" id="pick-up" value="pick-up">
+            <label for="pick-up">Pick-up</label><br>
+
+            <input type="radio" name="acquiring" id="delivery" value="delivery" />
+            <label for="delivery">Delivery</label><br>
+            <h3 id="driverTip">Be sure to tip the driver!</h3>
+
+        </p>
+
+        <p>
+            <input type="submit" value="Checkout!">
+        </p>
+
+    </form>
+
+</body>
+
+</html>
