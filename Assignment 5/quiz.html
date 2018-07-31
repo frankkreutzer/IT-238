@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Space Quiz</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="quizControls.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <style>
+        .container {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        label {
+            padding-left: 5px;
+        }
+
+        .hintText1,
+        .hintText2,
+        .hintText3,
+        .hintText4,
+        .hintText5 {
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Space Quiz!</h1><br>
+
+        <!--Question 1-->
+        <p>
+            <h5>Question 1</h5>
+            <strong>What the name of our planet? (1pt)</strong><br />
+            <input type="radio" name="q1" id="q1Home" /><label for="q1Home">Home</label><br />
+            <input type="radio" name="q1" id="q1Earth" /><label for="q1Earth">Earth</label><br />
+            <input type="radio" name="q1" id="q1America" /><label for="q1America">America</label><br />
+            <span id="q1Hidden"><input type="radio" name="q1" id="q1World" /><label for="q1World">The World</label><br></span>
+            <p class="hintText1">The substance of the land surface; soil</p>
+            <button type="button" class="btn btn-info" id="hintBtn1">Get Hint</button>
+            <button type="button" class="btn btn-info" id="hint2Btn1">Eliminate a Wrong Answer</button>
+
+        </p><br>
+
+        <!--Question 2-->
+        <p>
+            <h5>Question 2</h5>
+            <strong>How many planets are in our solar system? (1pt)</strong><br />
+            <input type="radio" name="q2" id="q2Nine" /><label for="q2Nine">9</label><br />
+            <span id="q2Hidden"><input type="radio" name="q2" id="q2Six" /><label for="q2Six">6</label><br /></span>
+            <input type="radio" name="q2" id="q2Eight" /><label for="q2Eight">8</label><br />
+            <input type="radio" name="q2" id="q2One" /><label for="q2One">1</label><br>
+            <p class="hintText2">Pluto is no longer a planet... :(</p>
+            <button type="button" class="btn btn-info" id="hintBtn2">Get Hint</button>
+            <button type="button" class="btn btn-info" id="hint2Btn2">Eliminate a Wrong Answer</button>
+        </p><br>
+
+        <!--Question 3-->
+        <p>
+            <h5>Question 3</h5>
+            <strong>True or False: Our Sun is a star? (1pt)</strong><br />
+            <input type="radio" name="q3" id="q3True" /><label for="q3True">True</label><br />
+            <input type="radio" name="q3" id="q3False" /><label for="q3False">False</label><br>
+            <p class="hintText3">It's a yellow dwarf</p>
+            <button type="button" class="btn btn-info" id="hintBtn3">Get Hint</button>
+            <button type="button" class="btn btn-info" id="hint2Btn3">Eliminate a Wrong Answer</button>
+        </p><br>
+
+        <!--Question 4-->
+        <p>
+            <h5>Question 4</h5>
+            <strong>Which planet(s) has/have rings? (1pt)</strong><br />
+            <input type="checkbox" name="q4" id="q4Jupiter" /><label for="q4Jupiter">Jupiter</label><br />
+            <input type="checkbox" name="q4" id="q4Saturn" /><label for="q4Saturn">Saturn</label><br />
+            <input type="checkbox" name="q4" id="q4Uranus" /><label for="q4Uranus">Uranus</label><br />
+            <input type="checkbox" name="q4" id="q4Neptune" /><label for="q4Neptune">Neptune</label><br>
+            <p class="hintText4">All the gas giants have rings</p>
+            <button type="button" class="btn btn-info" id="hintBtn4">Get Hint</button>
+            <button type="button" class="btn btn-info" id="hint2Btn4">Eliminate a Wrong Answer</button>
+        </p><br>
+
+        <!--Question 5-->
+        <p>
+            <h5>Question 5</h5>
+            <strong>Correctly order the planets (1 = closest to the sun, 8 = furthest from the sun) (8pts):</strong><br />
+            <input type="text" size="1" name="q5" id="q5Jupiter" /><label for="q5Jupiter">Jupiter</label><br />
+            <input type="text" size="1" name="q5" id="q5Earth" /><label for="q5Earth">Earth</label><br />
+            <input type="text" size="1" name="q5" id="q5Mercury" /><label for="q5Mercury">Mercury</label><br />
+            <input type="text" size="1" name="q5" id="q5Uranus" /><label for="q5Uranus">Uranus</label><br />
+            <input type="text" size="1" name="q5" id="q5Neptune" /><label for="q5Neptune">Neptune</label><br />
+            <input type="text" size="1" name="q5" id="q5Venus" /><label for="q5Venus">Venus</label><br />
+            <input type="text" size="1" name="q5" id="q5Mars" /><label for="q5Mars">Mars</label><br />
+            <input type="text" size="1" name="q5" id="q5Saturn" /><label for="q5Saturn">Saturn</label><br />
+            <p class="hintText5">Mom Visits Every Monday, Just Stays Until Noon</p>
+            <button type="button" class="btn btn-info" id="hintBtn5">Get Hint</button>
+            <hr>
+            <button type="button" class="btn btn-info" id="hint2Btn5">Eliminate a Wrong Answer</button>
+        </p>
+
+        <p>
+            <button type="button" class="btn btn-success" id="submitButton">Submit Quiz</button>
+        </p>
+
+        <p>
+            <span style="color: green"><strong>Results</strong><br />
+            <textarea id="results" value="" rows=8 cols=40 wrap="virtual"></textarea>
+        </p>
+    </div>
+
+</body>
+</html>
